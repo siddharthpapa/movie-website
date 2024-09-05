@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+      <h1>Srivats movie store</h1>
+      <p>Movies </p>
+      <table border="1">
+        
+		<th> Movie Name </th>
+		<th> Director Name </th>
+    <th> Actor Name </th>
+    <th> Movie Language </th>
+    <th> Video  Defination </th>
+    <th> Movie Status </th>
+            <% var details=''; %>
+        <%  for (var i = 0; i < finalData.length; i++) {
+            details = finalData[i];
+            details.forEach(function(doc) {
+            
+         %>
+            <tr> <td><%= doc.Movie_name %></td>
+                <td> <%= doc.Director_name %> </td>
+                <td> <%= doc.Actor_name %> </td>
+                <td> <%= doc.Movie_language %> </td>
+                <td> <%= doc.Video_defination %> </td>
+                <td> <%= doc.Movie_status %> </td>
+                
+            </tr>    
+            <% } );
+        }
+            %> 
+
+  </table>
+    </div>
+  </main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

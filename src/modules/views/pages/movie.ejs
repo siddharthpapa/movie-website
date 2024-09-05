@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1><ceter> <fontt color="Green">Cine hub</fontt></ceter></h1>
+</head>
+<body class="container">
+
+<header>
+
+</header>
+
+<main>
+       
+    <table border="">
+        
+		<th> Movie Name </th>
+		<th> Director Name </th>
+    <th> Actor Name </th>
+    <th> Movie Language </th>
+    <th> Video  Defination </th>
+    <th> Movie Status </th>
+            <% var details=''; %>
+        <%  for (var i = 0; i < finalData.length; i++) {
+            details = finalData[i];
+            details.forEach(function(doc) {
+            
+         %>
+            <tr> <td><%= doc.Movie_name %></td>
+                <td> <%= doc.Director_name %> </td>
+                <td> <%= doc.Actor_name %> </td>
+                <td> <%= doc.Movie_language %> </td>
+                <td> <%= doc.Video_defination %> </td>
+                <td> <%= doc.Movie_status %> </td>
+                
+            </tr>    
+            <% } );
+        }
+            %> 
+
+  </table>
+    </div>
+  </main>
+
+<footer>
+ 
+</footer>
+
+</body>
+</html>
